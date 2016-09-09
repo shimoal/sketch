@@ -1,0 +1,23 @@
+#heading, #container {
+  text-align: center;
+  margin: 0 auto;
+  float: none;
+}
+
+#container {
+  background-color: black;
+  height: auto;
+  overflow: auto;
+  width: 1000px;
+  border: 1px solid black;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  opacity: 1;
+  border: 1px solid black;
+  display: inline-block;
+  margin: -1px;
+}
