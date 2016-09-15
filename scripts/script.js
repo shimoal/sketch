@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
-
+		var valid_size = true;
 //generate a new grid after selecting a mode
 	$('.mode-button').on('click', function(){
+			valid_size = false;
 			var current_mode = $(this).val();
  			newSize();
 			sketchMode(current_mode);
@@ -22,7 +23,15 @@ $(document).ready(function(){
 
  	function newSize(){
  		$('#container').empty();
- 		var new_size = prompt("what size would you like?");//needs to check for valid input
+ 		while (!valid_size) {
+ 			var new_size = prompt("what size would you like?");//needs to check for valid input
+ 			if (new_size < 1 || new_size > 65 || isNaN(new_size))
+ 				alert("Sorry, that was not a valid size. Please enter a number between 1 and 65.");
+ 			else
+ 				valid_size = true;
+ 		}
+		
+		
 			buildGrid(new_size);
  	};
  	
@@ -54,6 +63,7 @@ $(document).ready(function(){
 	 			});
 	 			break;
 	 		case "fade":
+	 			$('#container').removeClass('white');
 	 			$('#container').addClass('black');
 	 			$('.box').addClass('white');
 	 			$('.box').mouseenter(function(){
@@ -72,11 +82,6 @@ $(document).ready(function(){
    			});
 	 	}
 	};
-
-	//buttons
-  $('#clear').click(function(){
-	 $('.box').css({'background-color': 'white', 'opacity': 1.0});
-  });
 
 	
 	//the initial default grid

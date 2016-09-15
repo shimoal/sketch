@@ -1,4 +1,4 @@
 To do list:
--make a menu for options
 -spruce up CSS
--add a footer with info
+-fix footer
+-figure out problem with grid sizes - why?
