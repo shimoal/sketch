@@ -1,3 +1,8 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
 body, div {
 	margin: 0;
 	padding: 0;
@@ -5,19 +10,51 @@ body, div {
 }
 
 body {
+	background: linear-gradient(to bottom, lightgreen, aqua);
 	background-color: lightgreen;
+	margin: 0 0 110px;
 }
 
-#heading, #container {
+header, #container {
   text-align: center;
   margin: 0 auto;
   float: none;
 }
 
+h1 {
+	color: darkslategray;
+	font-family: 'Permanent Marker', cursive, sans-serif;
+	font-size: 64px;
+	margin-bottom: 5px;
+}
+
+h2 {
+	font-size: 28px;
+	color: gray;
+	margin-top: 0;
+	font-family: "Dosis", "Arial", sans-serif;
+}
+
+button {
+	border: none;
+	padding: 10px 15px;
+	font-size: 16px;
+	margin: 8px;
+	border-radius: 10px;
+	background: linear-gradient(to bottom, white, gray);
+}
+
+button:hover {
+	background: linear-gradient(to bottom, gray, black);
+	color: white;
+	transform: scale(1.1);
+}
+
 #container {
   height: auto;
   overflow: auto;
-  width: 1100px;
+  width: 1000px;
+  height: 1000px;
   font-size: 0;
   text-align: center;
 }
@@ -47,20 +84,31 @@ body {
 	background-color: blue;
 }
 
-#footer {
-	background-color: cyan;
+footer {
+	background-color: lightseagreen;
 	height: 60px;
-	width: 120%;
 	float: bottom;
-	margin-top: 30px;
+	display: table;
+	margin: 0 auto;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
 }
 
-#footer li{
-	display: inline;
+footer li{
+	display: table-cell;
+	padding: 0px 10px;
+	margin: 0 auto;
+	width: 600px;
+	font-size: 18px;
 	text-align: center;
-	margin: 70px;
 }
 
-#footer ul{
-	padding-top: 20px;
+a:link {
+	color: darkgreen;
 }
+
+a:visited {
+	color: lightgreen;
+}
+

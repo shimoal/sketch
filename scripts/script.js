@@ -11,14 +11,13 @@ $(document).ready(function(){
 
 //building the grid
 	function buildGrid(size){
-		var dimension = (1000 / size).toString();
+		var dimension = (1000 / size / 10).toString();
 		for(var j = 0; j < size; j++){
 			for (var i = 0; i< size; i ++){
-  			$('#container').append($('<div class="box"></div>').css({'width': dimension+'px', 'height': dimension+'px'}));
+  			$('#container').append($('<div class="box"></div>').css({'width': dimension + '%', 'height': dimension+'%'}));
 			};
 	 	 		$('#container').append('<br>');
 		};
-		$('#container').css({'width': dimension*size + 'px'});
 	};
 
  	function newSize(){
